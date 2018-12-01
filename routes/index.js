@@ -2,6 +2,7 @@ const express = require("express");
 const router = express.Router();
 
 const request = require("request");
+
 /* GET home page. */
 router.get("/", function(req, res, next) {
   const url =
@@ -11,8 +12,9 @@ router.get("/", function(req, res, next) {
       console.log(err);
     } else {
       body = JSON.parse(body);
+      const imgUrl = body.data.image_original_url;
       console.log(body);
-      res.render("index", { title: "Express" });
+      res.render("index", { title: "My Giphy App", imgUrl });
     }
   });
 });
