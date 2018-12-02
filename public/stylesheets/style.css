@@ -1,8 +1,16 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+body,
+html {
+  padding: 0;
 }
 
-a {
-  color: #00b7ff;
+main {
+  padding: 2em;
+}
+
+#search-result {
+  background-color: #ccc;
+  border: 10px solid #343a40;
+  border-radius: 5px;
+  margin: 0;
+  display: inline-block;
 }
